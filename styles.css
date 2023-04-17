@@ -1,0 +1,85 @@
+/* 
+
+
+
+*/
+
+* {
+    font-size: 16px;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+.index-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas: 
+    "Head Head"
+    "Main Main";
+}
+
+.index-header-container {
+    grid-area: Head;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    height: 18vh;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+
+.index-main-container {
+    grid-area: Main;
+    display: grid;
+    height: 80vh;
+    width: 100vw;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "Socials About Youtube"
+    "Socials Event Youtube";
+    border: 1px solid black;
+}
+
+.socials-grid {
+    grid-area: Socials;
+    width: 10rem;
+    justify-self: left;
+    margin: 1rem;
+    border: 1px solid black;
+}
+
+.about-grid {
+    grid-area: About;
+    margin: 1rem;
+    width: 68vw;
+    border: 1px solid black;
+}
+
+.youtube-grid {
+    grid-area: Youtube;
+    margin: 1rem;
+    width: 20rem;
+    justify-self: right;
+    border: 1px solid black;
+}
+
+.event-grid {
+    grid-area: Event;
+    margin: 1rem;
+    width: 68vw;
+    border: 1px solid black;
+}
